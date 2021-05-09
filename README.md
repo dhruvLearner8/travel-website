@@ -1,0 +1,2 @@
+-> this a travel website created by python djano and postrgessql(as backend)
+-> there is login, register and logout
