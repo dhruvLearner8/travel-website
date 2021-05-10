@@ -1,1 +1,2 @@
-# travel-website
+ travel-website USING PYTHON AND DJANGO
+ -> PLEASE OPEN MASTER BRANCH TO SEE PROJECT
