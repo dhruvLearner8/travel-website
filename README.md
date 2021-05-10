@@ -1,2 +1,3 @@
 -> this a travel website created by python djano and postrgessql(as backend)
 -> there is login, register and logout
+-> TO RUN THIS FILE GO IN ENV FOLDER  THAN GO TO TUTORIAL FOLDER, OPEN THIS IN VS CODE OR COMMAND PROMPT AND TYPE PYTHON MANAGE.PY RUNSERVER
