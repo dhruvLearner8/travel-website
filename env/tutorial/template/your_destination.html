@@ -1,0 +1,39 @@
+{%extends 'basic.html'%}
+
+{%block body%} 
+<ul class="list-group" id="item">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    
+    <span class="badge bg-primary rounded-pill">
+    </span>
+  </li>
+ 
+</ul>  
+{%endblock%}
+{%block js%}
+<script>
+  
+  if(localStorage.getItem('cart')==null)
+	{
+		var cart={};
+	}
+	else
+	{
+		cart=JSON.parse(localStorage.getItem('cart'));
+		
+	}
+  console.log(cart);
+  let i=1;
+  for(items in cart)
+  {
+    
+    let name = cart[items][1];
+    let qty = cart[items][0];
+    let price=cart[items][2];
+    document.write(i+"  ) "+  name + "  -  " +"          "+price+"<br>" );
+    i=i+1;
+  
+  
+  }
+</script>
+{%endblock%}

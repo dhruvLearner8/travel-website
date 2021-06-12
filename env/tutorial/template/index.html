@@ -31,12 +31,13 @@
 							<div class="logo"><a href="index.html">Travello</a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
+									{% if user.is_authenticated%}
+									<li><a href="home1">home1</a></li>
+									
+									{%else%}
 									<li class="active"><a href="index.html">Home</a></li>
 									<li><a href="contact.html">Contact</a></li>
-									{% if user.is_authenticated%}
-									<li>hello,{{user.first_name}}</li>
-									<li><a href="accounts/logout">Logout</a></li>
-									{%else%}
+									
 									
 									<li><a href="accounts/register">register</a></li>
 									<li><a href="accounts/login">login</a></li>
@@ -113,7 +114,7 @@
 							<div class="row">
 								<div class="col">
 									<div class="home_slider_content">
-										<div class="home_title"><h2>Let us take you away</h2></div>
+										<div class="home_title"><h2>Let us take you away </h2></div>
 									</div>
 								</div>
 							</div>
@@ -263,8 +264,8 @@
 								{%endif%}
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="{% static 'destinations.html'%}">{{dest.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
+								<div class="destination_title"><a href= '{% static destinations.html%}'>{{dest.name}}</a></div>
+								<div class="destination_subtitle"><p>{{dest.desc|truncatewords:4}}...</p></div>
 								<div class="destination_price">From ${{dest.price}}</div>
 							</div>
 						</div>
@@ -277,6 +278,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div>
+		<p> NOTE - PLEASE LOGIN TO VIEW DESCRIPTION AND TO BOOK</p>
 	</div>
 
 	<!-- Testimonials -->

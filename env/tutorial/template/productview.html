@@ -1,0 +1,18 @@
+{%extends 'basic.html'%}
+{%block title %} {{dests.name}}  {%endblock%}
+{%block body%}
+<div class="container">
+    <div class="row">
+    <div class="row">
+      <div class="col-sm-4">
+          <img src="/media/{{dests.image}}" >
+      </div>
+      <div class="col-sm-8">
+          <h5> {{dests.name}}</h5>
+          <p>  {{dests.desc}}</p>
+      </div>
+    </div>
+</div>
+</div>
+    
+{%endblock%}

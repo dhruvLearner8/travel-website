@@ -1,0 +1,25 @@
+
+{%extends 'basic.html'%}
+{%load static%}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/contact.css' %}">
+</head>
+{%block body%}
+
+<div>
+    <form action="contact" method="POST">
+        {% csrf_token%}
+        <input type="text" name="name" placeholder="your name"><br>
+        <input type="email" name="email" placeholder="email id"><br>
+        <input type="text" name="phone" placeholder="phone No"><br>
+        <input type="text" name="query" placeholder="Description"><br>
+
+        
+        <input type="Submit">
+    </form>
+    
+    <h3>{{message}}</h3>
+    
+</div>
+    
+{%endblock%}

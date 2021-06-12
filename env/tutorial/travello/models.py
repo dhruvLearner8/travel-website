@@ -7,3 +7,10 @@ class destination(models.Model):
     desc= models.TextField()
     price= models.IntegerField(default=0)
     offer= models.BooleanField(default=False)
+
+
+class Contact(models.Model):
+    name=models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
+    phone=models.CharField(max_length=10)
+    query=models.TextField()
